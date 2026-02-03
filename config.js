@@ -15,17 +15,7 @@ const config = {
         store: "https://sintuxcraft.craftingstore.net/",
         instagram: "https://www.instagram.com/sintuxstudios/",
         youtube: "https://www.youtube.com/@SintuxStudios"
-    },
-
-    // 3. ENLACES DE VOTACIÓN (6 Sitios)
-    voteLinks: [
-        { name: "NameMC", url: "https://namemc.com" },
-        { name: "MinecraftMP", url: "https://minecraft-mp.com" },
-        { name: "PlanetMinecraft", url: "https://planetminecraft.com" },
-        { name: "TopG", url: "https://topg.org/minecraft-servers/" },
-        { name: "MinecraftServers", url: "https://minecraftservers.org/" },
-        { name: "BestServers", url: "https://bestservers.com/" }
-    ],   
+    }, 
 
     // 4. CONTENIDO (Español _es / Inglés _en UNIFICADOS)
     content: {
@@ -166,5 +156,6 @@ const config = {
     }
 
 };
+
 
 
