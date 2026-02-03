@@ -35,16 +35,10 @@ function changeLanguage(key) {
 
     setText('nav-home', ui.nav.home);
     setText('nav-staff', ui.nav.staff);
-    setText('nav-rules', ui.nav.rules);
-    setText('nav-faq', ui.nav.faq);
-    setText('nav-vote', ui.nav.vote);
     setText('hero-subtitle', ui.hero.subtitle);
     setText('hero-btn-copy', ui.hero.btn_copy);
-    setText('hero-online', ui.hero.online);
     setText('title-staff', ui.titles.staff);
     setText('title-rules', ui.titles.rules);
-    setText('title-faq', ui.titles.faq);
-    setText('title-vote', ui.titles.vote);
     setText('title-legal', ui.titles.legal);
 
     setText('tab-tos', ui.legal_tabs.tos);
@@ -176,4 +170,5 @@ function initParticles() {
         p.style.animationDuration=(Math.random()*15+10)+'s';
         c.appendChild(p);
     }
+
 }
