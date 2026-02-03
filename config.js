@@ -40,7 +40,7 @@ const config = {
                 name: "iloperv", role: "MANAGER", 
                 bio_es: "Configurador de los eventos y series.",
                 bio_en: "Event and series configurator."
-            },      
+            }      
         ],
 
         // --- TEXTOS LEGALES COMPLETOS (HTML) ---
@@ -156,3 +156,4 @@ const config = {
     }
 
 };
+
