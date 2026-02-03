@@ -4,8 +4,8 @@
 
 const config = {
     // 1. INFO SERVIDOR
-    serverName: "VanguardMC",
-    serverIp: "mc.diosesmc.net",
+    serverName: "Sintux Studios",
+    serverIp: "mc.sintuxstudios.uk",
     serverLogo: "logo.png", // Asegúrate de que existe
     // El favicon se carga automáticamente si se llama "favicon.png"
 
@@ -20,13 +20,25 @@ const config = {
     },
 
     // 3. ENLACES DE VOTACIÓN (6 Sitios)
-    voteLinks: [
-        { name: "NameMC", url: "https://namemc.com" },
-        { name: "MinecraftMP", url: "https://minecraft-mp.com" },
-        { name: "PlanetMinecraft", url: "https://planetminecraft.com" },
-        { name: "TopG", url: "https://topg.org/minecraft-servers/" },
-        { name: "MinecraftServers", url: "https://minecraftservers.org/" },
-        { name: "BestServers", url: "https://bestservers.com/" }
+  "botones": [
+    {
+      "text": "Join Discord",
+      "icon": "fab fa-discord",
+      "link": "https://discord.com/demo",
+      "target": "_blank"
+    },
+    {
+      "text": "Vote Now",
+      "icon": "fas fa-star",
+      "link": "#vote",
+      "target": "_self"
+    },
+    {
+      "text": "Shop",
+      "icon": "fas fa-shopping-cart",
+      "link": "https://shop.demo.com",
+      "target": "_blank"
+    }
     ],
 
     // 4. CONTENIDO (Español _es / Inglés _en UNIFICADOS)
@@ -238,4 +250,5 @@ const config = {
             legal_tabs: { tos: "Terms", priv: "Privacy", notice: "Legal Notice" }
         }
     }
+
 };
