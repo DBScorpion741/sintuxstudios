@@ -81,7 +81,7 @@ body {
     transition: 0.3s; margin-bottom: 20px;
 }
 .ip-wrapper:hover { border-color: var(--aqua); box-shadow: 0 0 25px rgba(212,175,55,0.2); transform: scale(1.02); }
-.ip-content { padding: 12px 25px; display: flex; align-items: center; gap: 10px; color: var(--gold); font-family: monospace; font-size: 1.1rem; }
+.ip-content { padding: 12px 25px; display: flex; align-items: center; gap: 10px; color: var(--aqua); font-family: monospace; font-size: 1.1rem; }
 .ip-action { background: var(--aqua); color: #000; padding: 12px 25px; font-weight: 800; font-family: var(--font-title); transition: 0.3s; }
 .ip-wrapper.copied { border-color: #2ecc71; }
 .ip-wrapper.copied .ip-content { color: #2ecc71; }
@@ -97,7 +97,7 @@ body {
 section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
 .section-header { text-align: center; margin-bottom: 50px; }
 .section-header h2 { font-family: var(--font-title); font-size: 2.5rem; color: var(--aqua); }
-.gold-line { width: 60px; height: 3px; background: var(--aqua); margin: 10px auto; }
+.aqua-line { width: 60px; height: 3px; background: var(--aqua); margin: 10px auto; }
 .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
 
 /* Staff */
@@ -180,3 +180,5 @@ footer { padding: 50px 20px; text-align: center; border-top: 1px solid var(--bor
     .l-tab { border-right: none; border-bottom: 1px solid var(--border); }
 
 }
+
+
