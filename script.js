@@ -37,11 +37,11 @@ function changeLanguage(key) {
     setText('nav-staff', ui.nav.staff);
     setText('hero-subtitle', ui.hero.subtitle);
     setText('hero-btn-copy', ui.hero.btn_copy);
-    setText('title-legal', ui.titles.legal);
+    setText('title-proyects', ui.titles.proyects);
 
-    setText('tab-tos', ui.legal_tabs.tos);
-    setText('tab-notice', ui.legal_tabs.notice);
-    setText('tab-priv', ui.legal_tabs.priv);
+    setText('tab-tos', ui.proyects_tabs.tos);
+    setText('tab-notice', ui.proyects_tabs.notice);
+    setText('tab-priv', ui.proyects_tabs.priv);
 
     // Contenido Dinámico Unificado
     renderGrid('staff-container', config.content.staff, (m) => `
@@ -154,5 +154,6 @@ function initParticles() {
     }
 
 }
+
 
 
