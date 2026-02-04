@@ -1,6 +1,7 @@
 :root {
     --bg-dark: #050505;
     --bg-card: #0c0c0c;
+    --dbs: #9A2EC8;    
     --gold: #34DAED;
     --gold-hover: #34DAED;
     --border: rgba(212, 175, 55, 0.2);
@@ -69,11 +70,11 @@ body {
 .lang-option:hover { background: var(--gold); color: #000; }
 .fi { font-size: 1.2em; border-radius: 2px; }
 
-/* Hero */
+/* inicio */
 #hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding-top: 80px; }
-.hero-logo { max-width: 320px; margin-bottom: 2rem; filter: drop-shadow(0 0 40px rgba(212,175,55,0.2)); animation: float 6s infinite ease-in-out; }
+.inicio-logo { max-width: 320px; margin-bottom: 2rem; filter: drop-shadow(0 0 40px rgba(212,175,55,0.2)); animation: float 6s infinite ease-in-out; }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
-.hero-subtitle { color: #ccc; margin-bottom: 2rem; font-size: 1.1rem; }
+.inicio-subtitle { color: #ccc; margin-bottom: 2rem; font-size: 1.1rem; }
 
 .ip-wrapper {
     background: rgba(255,255,255,0.03); border: 1px solid var(--border);
@@ -131,5 +132,6 @@ footer { padding: 50px 20px; text-align: center; border-top: 1px solid var(--bor
     .proyects-tabs { flex-direction: column; }
     .l-tab { border-right: none; border-bottom: 1px solid var(--border); }
 }
+
 
 
