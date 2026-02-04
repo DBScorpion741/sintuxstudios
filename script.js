@@ -35,8 +35,8 @@ function changeLanguage(key) {
 
     setText('nav-home', ui.nav.home);
     setText('nav-staff', ui.nav.staff);
-    setText('hero-subtitle', ui.hero.subtitle);
-    setText('hero-btn-copy', ui.hero.btn_copy);
+    setText('inicio-subtitle', ui.inicio.subtitle);
+    setText('inicio-btn-copy', ui.inicio.btn_copy);
     setText('title-proyects', ui.titles.proyects);
 
     setText('tab-tos', ui.proyects_tabs.tos);
@@ -81,7 +81,7 @@ function changeLanguage(key) {
     setText('nav-logo-text', config.serverName);
     setText('footer-name', config.serverName);
     setText('ip-display', config.serverIp);
-    const logo = document.getElementById('hero-logo-img');
+    const logo = document.getElementById('inicio-logo-img');
     if(config.serverLogo) logo.src = config.serverLogo;
 }
 
@@ -110,7 +110,7 @@ function copyIp() {
         actionText.innerText = "¡COPIADO!";
         setTimeout(() => {
             wrapper.classList.remove('copied');
-            actionText.innerText = config.interface[currentLangCode].hero.btn_copy;
+            actionText.innerText = config.interface[currentLangCode].inicio.btn_copy;
         }, 2000);
     });
 }
@@ -154,6 +154,7 @@ function initParticles() {
     }
 
 }
+
 
 
 
