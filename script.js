@@ -87,7 +87,7 @@ const colaboradores = [
     { nombre: "INddestable", img: "media2.png", link: "perfil-inddestable.html", color: "pink" },
     { nombre: "mrTocinin", img: "media3.png", link: "perfil-mrtocinin.html", color: "pink-light" },
     { nombre: "MrCreepers08", img: "media4.png", link: "perfil-mrcreepers08.html", color: "green" },
-    { nombre: "evamorgelio", img: "media5.png", link: "perfil-evamorgelio.html", color: "cyan" },
+    { nombre: "evamorgelio", img: "media5.png", link: "perfil-evamorgelio.html", color: "purple-dark" },
     { nombre: "OMARzMOURE", img: "media6.png", link: "perfil-omarzmoure.html", color: "orange" },
     { nombre: "extrandes", img: "media7.png", link: "perfil-extrandes.html", color: "blue" },
     { nombre: "Knoblademc", img: "media8.png", link: "perfil-knoblademc.html", color: "dark-green" }
