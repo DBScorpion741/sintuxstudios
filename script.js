@@ -101,7 +101,7 @@ if (grid) {
                 <div class="profile-image" style="background-image: url('${c.img}');">
                     <div class="profile-info">
                         <p class="profile-name">${c.nombre}</p>
-                        <p class="profile-desc">Sintux Medias Collab</p>
+                        <p class="profile-desc">Sintux Medias</p>
                     </div>
                 </div>
             </a>
