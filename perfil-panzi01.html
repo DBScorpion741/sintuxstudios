@@ -36,8 +36,9 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 15px; /* Espaciado uniforme */
+            gap: 15px;
             margin: 25px 0;
+            align-items: center;
         }
 
         .social-links a {
@@ -48,11 +49,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 30px;
         }
 
         .social-links a:hover { transform: scale(1.15); color: #6c5ce7; }
 
-        /* Estilo para que la K de Kick combine */
+        /* Estilo para tu imagen de X personalizada */
+        .custom-x-icon {
+            width: 22px;
+            height: 22px;
+            filter: brightness(0) invert(1);
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .x-custom-link:hover .custom-x-icon {
+            filter: brightness(0) saturate(100%) invert(43%) sepia(87%) saturate(1487%) hue-rotate(224deg) brightness(97%) contrast(92%);
+        }
+
+        /* Estilo para la K de Kick */
         .kick-icon {
             font-family: sans-serif;
             font-weight: 800;
@@ -60,6 +74,12 @@
             padding: 0 4px;
             border-radius: 4px;
             font-size: 1.2rem;
+            transition: all 0.2s;
+        }
+
+        .kick-icon:hover {
+            border-color: #6c5ce7;
+            color: #6c5ce7;
         }
 
         .back-btn {
@@ -70,6 +90,7 @@
             text-decoration: none;
             border-radius: 10px;
             font-weight: bold;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -83,8 +104,12 @@
         <div class="social-links">
             <a href="#"><i class="fab fa-twitch"></i></a>
             <a href="https://www.youtube.com/@panzi01"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/sebhral"<i class="fab fa-instragram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a> 
+            <a href="https://www.instagram.com/sebhral"><i class="fab fa-instagram"></i></a>
+            
+            <a href="https://x.com/tu_usuario" class="x-custom-link">
+                <img src="image_6d471c.png" alt="X" class="custom-x-icon">
+            </a>
+            
             <a href="https://www.tiktok.com/@.panzi01"><i class="fab fa-tiktok"></i></a>
             <a href="https://kick.com/panzi01" class="kick-icon">K</a>
         </div>
