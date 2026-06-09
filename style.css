@@ -549,3 +549,17 @@ nav a:hover, nav a.active {
     border-color: #6c5ce7;
     color: #6c5ce7 !important;
 }
+/* Ajusta el tamaño y aplica filtro blanco para que combine */
+.custom-x-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Convierte tu imagen a blanco */
+    transition: transform 0.2s, filter 0.2s;
+}
+
+/* Efecto al pasar el mouse (igual que los otros iconos) */
+.x-custom-link:hover .custom-x-icon {
+    transform: scale(1.15);
+    filter: brightness(0) saturate(100%) invert(43%) sepia(87%) saturate(1487%) hue-rotate(224deg) brightness(97%) contrast(92%);
+}
