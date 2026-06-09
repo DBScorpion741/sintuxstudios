@@ -549,17 +549,26 @@ nav a:hover, nav a.active {
     border-color: #6c5ce7;
     color: #6c5ce7 !important;
 }
-/* Ajusta el tamaño y aplica filtro blanco para que combine */
+/* Estilo para que tu imagen de X combine con los iconos SVG */
 .custom-x-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;            /* Mismo tamaño que los iconos de FA */
+    height: 20px;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* Convierte tu imagen a blanco */
+    filter: brightness(0) invert(1); /* Convierte tu imagen en blanco puro */
     transition: transform 0.2s, filter 0.2s;
 }
 
-/* Efecto al pasar el mouse (igual que los otros iconos) */
+/* Efecto al pasar el mouse (hover) */
 .x-custom-link:hover .custom-x-icon {
     transform: scale(1.15);
+    /* Color morado #6c5ce7 al pasar el mouse */
     filter: brightness(0) saturate(100%) invert(43%) sepia(87%) saturate(1487%) hue-rotate(224deg) brightness(97%) contrast(92%);
+}
+
+/* Asegurar alineación del resto de iconos */
+.social-links a {
+    min-width: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
