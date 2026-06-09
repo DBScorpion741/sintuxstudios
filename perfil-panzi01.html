@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panzi01</title>
+    <title>Perfil de Panzi01</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
@@ -38,4 +38,60 @@
         }
 
         h1 { margin: 10px 0; font-size: 2rem; }
-        p { color: #a0a0a0; margin
+        p { color: #a0a0a0; margin-bottom: 25px; }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 10px;
+        }
+
+        .social-links a:hover {
+            color: #6c5ce7;
+            transform: translateY(-5px);
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover { background: #333; }
+    </style>
+</head>
+<body>
+
+    <div class="perfil-card">
+        <img src="media1.png" alt="Panzi01" class="perfil-img">
+        
+        <h1>Panzi01</h1>
+        <p>Colaborador principal en Sintux Studios.</p>
+
+        <div class="social-links">
+            <a href="https://twitch.tv/auronplay" target="_blank"><i class="fab fa-twitch"></i></a>
+            <a href="https://youtube.com/@auronplay" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://instagram.com/auronplay" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/auronplay" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://tiktok.com/@auron" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://kick.com/auronplay" target="_blank"><i class="fas fa-gamepad"></i></a>
+        </div>
+
+        <a href="index.html" class="back-btn">← Volver al inicio</a>
+    </div>
+
+</body>
+</html>
