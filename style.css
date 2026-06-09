@@ -531,3 +531,21 @@ nav a:hover, nav a.active {
 @media (max-width: 900px) {
     .medias-grid { grid-template-columns: repeat(2, 1fr); }
 }
+.kick-icon {
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem !important; /* Ajustado para alinear con los iconos */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.kick-icon:hover {
+    border-color: #6c5ce7;
+    color: #6c5ce7 !important;
+}
