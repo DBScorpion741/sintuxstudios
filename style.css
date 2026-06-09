@@ -1,0 +1,533 @@
+/* Estilos Base y Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #050505;
+    background-image: radial-gradient(circle, #0e0d08 0%, #000000 85%);
+    font-family: 'Rubik', sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Decoración geométrica fija en el fondo */
+.bg-squares {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.square {
+    position: absolute;
+    background: rgba(212, 163, 89, 0.02);
+    border: 1px solid rgba(212, 163, 89, 0.03);
+    transform: rotate(45deg);
+}
+
+.sq1 { width: 40px; height: 40px; top: 25%; left: 43%; }
+.sq2 { width: 60px; height: 60px; top: 48%; left: 44%; }
+.sq3 { width: 35px; height: 35px; top: 52%; left: 63%; }
+.sq4 { width: 50px; height: 50px; top: 75%; left: 32%; }
+.sq5 { width: 30px; height: 30px; top: 30%; left: 22%; }
+.sq6 { width: 55px; height: 55px; top: 88%; left: 21%; }
+.sq7 { width: 65px; height: 65px; top: 85%; left: 80%; }
+.sq8 { width: 25px; height: 25px; top: 71%; left: 77%; }
+
+/* Header y Menú Superior Fijo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(5,5,5,0.95) 60%, rgba(5,5,5,0));
+}
+
+.brand {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #999999;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    transition: color 0.25s ease-in-out;
+}
+
+nav a:hover, nav a.active {
+    color: #ffffff !important;
+}
+
+/* Redes Sociales */
+.social-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #e1e1e1;
+    transition: fill 0.2s ease;
+}
+
+.social-icon:hover svg {
+    fill: #ffffff;
+}
+
+.social-icon:hover {
+    transform: scale(1.12);
+}
+
+/* ESTRUCTURA DE LAS SECCIONES */
+.scroll-container {
+    position: relative;
+    z-index: 5;
+}
+
+.page-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 20px 20px;
+}
+
+/* Títulos de Secciones Igualados con el Font del Logo de Texto y Color Celeste */
+.section-title {
+    font-family: 'Oswald', sans-serif; /* Mismo font que SINTUX STUDIOS */
+    font-size: 46px;
+    font-weight: 700;
+    color: #40d7ea; /* Color Celeste / Cian de la marca */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(64, 215, 234, 0.2);
+}
+
+.section-subtitle {
+    color: #b0b0b0;
+    font-size: 15px;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Estilos de la sección Inicio */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+    margin-bottom: 30px;
+}
+
+.main-logo {
+    max-width: 260px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0; 
+    transform: translateY(15px);
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.85));
+    transition: opacity 0.6s ease-out, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.4s ease;
+}
+
+.main-logo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-logo.visible:hover, .main-logo.visible:active {
+    transform: translateY(-10px) scale(1.02);
+    filter: drop-shadow(0 15px 30px rgba(64, 215, 234, 0.35)) drop-shadow(0 4px 10px rgba(0,0,0,0.9));
+    cursor: pointer;
+}
+
+.loading-text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    margin-bottom: 8px;
+    text-align: center;
+    animation: pulse 1.4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* Widget de la IP */
+.ip-bar {
+    background-color: rgba(9, 9, 9, 0.85);
+    border: 1.5px solid #40d7ea;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 460px;
+    height: 52px;
+    padding-left: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s ease;
+}
+
+.ip-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.wifi-icon {
+    display: flex;
+    align-items: center;
+}
+
+.wifi-icon svg {
+    width: 19px;
+    height: 19px;
+    fill: #40d7ea;
+    transition: fill 0.3s ease;
+}
+
+.ip-text {
+    color: #40d7ea;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* Botón Copiar */
+.btn-copy {
+    background-color: #40d7ea;
+    color: #000000;
+    border: none;
+    height: 100%;
+    padding: 0 35px;
+    border-top-right-radius: 26px;
+    border-bottom-right-radius: 26px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ip-bar.copied-active {
+    border-color: #2ed589;
+}
+
+.ip-bar.copied-active .wifi-icon svg {
+    fill: #2ed589;
+}
+
+.ip-bar.copied-active .ip-text {
+    color: #2ed589;
+}
+
+.ip-bar.copied-active .btn-copy {
+    background-color: #2ed589;
+}
+.carousel-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyectos-container { width: 100%; }
+
+.slide {
+    display: none;
+    grid-template-columns: repeat(3, 1fr); /* 3 arriba, 3 abajo */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.slide.active { display: grid; }
+
+.proyecto-card {
+    background: #111;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Efecto Neón */
+.proyecto-card:hover {
+    border: 1px solid #40d7ea;
+    box-shadow: 0 0 15px rgba(64, 215, 234, 0.6);
+    transform: translateY(-5px);
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* FLECHAS CON BRILLO */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(64, 215, 234, 0.1);
+    color: #40d7ea;
+    border: 2px solid #40d7ea;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    box-shadow: 0 0 20px #40d7ea, 0 0 40px #40d7ea;
+    background: #40d7ea;
+    color: #000;
+}
+
+.prev { left: -80px; opacity: 0; pointer-events: none; } /* Oculto al inicio */
+.prev.visible { opacity: 1; pointer-events: all; }
+.next { right: -80px; }
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 900px) {
+    .proyectos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.equipo-grid {
+    display: grid;
+    /* Esto es la clave: se ajusta al número de personas que tengas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.miembro-card {
+    background: #0d0d0d;
+    padding: 30px;
+    text-align: center;
+    border: 2px solid #333; /* Borde inicial neutro */
+    transition: all 0.3s ease;
+}
+
+/* Colores por rango */
+.rango-owner .role { color: #D41E1E; }
+.rango-admin .role { color: #e74c3c; }
+.rango-dev .role { color: #2cb2da; }
+.rango-manager .role { color: #d96b4c; }
+.rango-builder .role { color: #f1c40f; }
+
+/* Efecto Hover: El borde toma el color del rango */
+.rango-owner:hover { border-color: #D41E1E; box-shadow: 0 0 15px rgba(255,85,85,0.2); }
+.rango-admin:hover { border-color: #e74c3c; box-shadow: 0 0 15px rgba(85,255,85,0.2); }
+.rango-dev:hover { border-color: #2cb2da; box-shadow: 0 0 15px rgba(85,85,255,0.2); }
+.rango-manager:hover { border-color: #d96b4c; box-shadow: 0 0 15px rgba(85,85,255,0.2); }
+.rango-builder:hover { border-color: #f1c40f; box-shadow: 0 0 15px rgba(85,85,255,0.2); }
+
+.player-head {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+    image-rendering: pixelated;
+    border-radius: 4px;
+}
+/* --- CSS DE ALTA PRIORIDAD (Ignora cualquier otro estilo previo) --- */
+
+.tabla-puntos-container {
+    width: 90% !important;
+    max-width: 600px !important;
+    height: 500px !important;
+    overflow-y: auto !important;
+    margin: 40px auto !important;
+    background: #0d0d0d !important;
+    border: 1px solid #333 !important;
+    border-radius: 8px !important;
+    position: relative !important;
+}
+
+/* Scrollbar estilo Ghost */
+.tabla-puntos-container::-webkit-scrollbar { width: 6px !important; }
+.tabla-puntos-container::-webkit-scrollbar-track { background: transparent !important; }
+.tabla-puntos-container::-webkit-scrollbar-thumb { 
+    background: rgba(64, 215, 234, 0.3) !important; 
+    border-radius: 10px !important;
+}
+
+.puntos-table-fixed {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+}
+
+.puntos-table-fixed thead th {
+    position: sticky !important;
+    top: 0 !important;
+    background: #0d0d0d !important;
+    padding: 15px !important;
+    border-bottom: 2px solid #40d7ea !important;
+    color: #40d7ea !important;
+    text-transform: uppercase !important;
+    z-index: 10 !important;
+}
+
+.puntos-table-fixed td {
+    padding: 15px !important;
+    border-bottom: 1px solid #222 !important;
+    color: #fff !important;
+}
+
+.jugador-col {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    text-align: left !important;
+}
+
+.puntos-centrados {
+    text-align: center !important;
+}
+
+.skin-mini {
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 4px !important;
+    flex-shrink: 0 !important;
+    display: block !important;
+}
+/* --- 1. ESTRUCTURA DEL GRID --- */
+.medias-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- 2. TARJETA DE PERFIL (CONTENEDOR) --- */
+.profile-card {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Mantiene proporción 1:1 */
+    border: 2px solid;     /* El color se define por la clase border-X */
+    transition: all 0.3s ease;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    background: #0d0d0d;
+}
+
+/* --- 3. IMAGEN Y EFECTO DE DESVANECIDO --- */
+.profile-image {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinea info al fondo */
+}
+
+/* Degradado para integrar el texto en la imagen */
+.profile-image::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 100%);
+    z-index: 1;
+}
+
+/* --- 4. INFORMACIÓN DE TEXTO --- */
+.profile-info {
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.profile-name { 
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem; 
+    margin: 0; 
+}
+
+.profile-desc { 
+    font-size: 0.85rem; 
+    opacity: 0.7; 
+    margin: 5px 0 0 0; 
+}
+
+/* --- 5. EFECTO HOVER (ILUMINACIÓN) --- */
+.profile-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px currentColor; /* La sombra toma el color del borde */
+}
+
+/* --- 6. COLORES ESPECÍFICOS DE BORDE --- */
+.border-purple { border-color: #9b59b6; color: #9b59b6; }
+.border-pink { border-color: #ff6b81; color: #ff6b81; }
+.border-pink-light { border-color: #ff9ff3; color: #ff9ff3; }
+.border-green { border-color: #2ecc71; color: #2ecc71; }
+.border-cyan { border-color: #40d7ea; color: #40d7ea; }
+.border-orange { border-color: #e67e22; color: #e67e22; }
+.border-blue { border-color: #3498db; color: #3498db; }
+.border-dark-green { border-color: #1abc9c; color: #1abc9c; }
+
+/* --- 7. AJUSTE MÓVIL --- */
+@media (max-width: 900px) {
+    .medias-grid { grid-template-columns: repeat(2, 1fr); }
+}
