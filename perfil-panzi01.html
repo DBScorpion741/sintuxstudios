@@ -6,15 +6,53 @@
     <title>Perfil de Panzi01 | Sintux Studios</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            background-color: #0a0a0a;
-            color: #ffffff;
-            font-family: 'Segoe UI', sans-serif;
+        /* Contenedor principal que se asegura de ocupar todo el ancho y alto */
+        body, html {
             margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Evita que las barras de desplazamiento aparezcan por el desenfoque */
+            font-family: 'Segoe UI', sans-serif;
+            color: #ffffff;
+        }
+
+        /* Contenedor para el fondo con la imagen y el efecto borroso */
+        .background-container {
+            position: fixed;
+            top: -10px; /* Pequeño margen negativo para ocultar los bordes del desenfoque */
+            left: -10px;
+            width: calc(100% + 20px);
+            height: calc(100% + 20px);
+            background-image: url('image_7.png'); /* Ruta a la imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* --- EFECTO BORROSO --- */
+            filter: blur(10px); /* Ajusta este valor (ej. 5px, 15px) para más o menos borrosidad */
+            
+            z-index: -1; /* Se asegura de que el fondo esté detrás del contenido */
+        }
+
+        /* Capa superpuesta para oscurecer el fondo si es necesario */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Un fondo negro semi-transparente (40% de opacidad) */
+            z-index: -1;
+        }
+
+        /* Contenedor del contenido del perfil, centrado en la pantalla */
+        .content-container {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            z-index: 1; /* Asegura que el contenido esté por encima del fondo */
         }
 
         .perfil-card {
@@ -22,6 +60,10 @@
             padding: 40px;
             width: 90%;
             max-width: 400px;
+            /* Fondo sólido para la tarjeta si lo deseas, o déjala transparente */
+            background-color: rgba(26, 26, 26, 0.85); /* Un fondo oscuro semi-transparente */
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Sombra para dar profundidad */
         }
 
         .perfil-img {
@@ -94,30 +136,12 @@
             font-weight: bold;
             margin-top: 10px;
         }
+        .back-btn:hover { background: #333333; }
     </style>
 </head>
 <body>
 
-    <div class="perfil-card">
-        <img src="media1.png" alt="Panzi01" class="perfil-img">
-        <h1>Panzi01</h1>
-        <p>Estafador principal en Sintux Studios.</p>
+    <div class="background-container"></div>
+    <div class="overlay"></div>
 
-<div class="social-links">
-    <a href="#"><i class="fab fa-twitch"></i></a>
-    <a href="https://www.youtube.com/@panzi01"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.instagram.com/sebhral"><i class="fab fa-instagram"></i></a>
-    
-    <a href="https://x.com/tu_usuario" class="x-custom-link">
-        <img src="image_6d471c.png" alt="X" class="custom-x-icon">
-    </a>
-    
-    <a href="https://www.tiktok.com/@.panzi01"><i class="fab fa-tiktok"></i></a>
-    <a href="https://kick.com/panzi01" class="kick-icon">K</a>
-</div>
-
-        <a href="index.html" class="back-btn">← Volver al inicio</a>
-    </div>
-
-</body>
-</html>
+    <div class="
