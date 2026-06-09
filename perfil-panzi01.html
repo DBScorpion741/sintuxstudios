@@ -45,7 +45,7 @@
             color: #ffffff;
             font-size: 1.5rem;
             text-decoration: none;
-            transition: transform 0.2s;
+            transition: transform 0.2s, color 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -54,15 +54,17 @@
 
         .social-links a:hover { transform: scale(1.15); color: #6c5ce7; }
 
-        /* Estilo para tu imagen de X personalizada */
+        /* Estilo para tu imagen de X personalizada y arreglada */
         .custom-x-icon {
-            width: 22px;
-            height: 22px;
-            filter: brightness(0) invert(1);
+            width: 20px; /* Tamaño ajustado para uniformidad */
+            height: 20px;
+            object-fit: contain;
+            filter: brightness(0) invert(1); /* Convierte tu imagen a blanco */
             transition: transform 0.2s, filter 0.2s;
         }
 
         .x-custom-link:hover .custom-x-icon {
+            /* Mismo efecto de color morado al pasar el mouse */
             filter: brightness(0) saturate(100%) invert(43%) sepia(87%) saturate(1487%) hue-rotate(224deg) brightness(97%) contrast(92%);
         }
 
@@ -107,7 +109,7 @@
             <a href="https://www.instagram.com/sebhral"><i class="fab fa-instagram"></i></a>
             
             <a href="https://x.com/tu_usuario" class="x-custom-link">
-                <img src="image_6d471c.png" alt="X" class="custom-x-icon">
+                <img src="https://i.ibb.co/5c5c5c5/fixed-x-icon.png" alt="X" class="custom-x-icon">
             </a>
             
             <a href="https://www.tiktok.com/@.panzi01"><i class="fab fa-tiktok"></i></a>
